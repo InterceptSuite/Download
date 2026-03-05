@@ -1,0 +1,134 @@
+name: interceptsuite
+
+on:
+  schedule:
+    - cron: "0 0 */15 * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  update-json:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Fetch latest release and update interceptsuite.json
+        run: |
+          RELEASE=$(curl -s https://api.github.com/repos/InterceptSuite/InterceptSuite/releases/latest)
+
+          get_asset() {
+            echo "$RELEASE" | python3 -c "
+          import sys, json
+          release = json.load(sys.stdin)
+          keyword = '$1'
+          for asset in release.get('assets', []):
+              if keyword.lower() in asset['name'].lower():
+                  print(json.dumps({
+                      'name': asset['name'],
+                      'download_url': asset['browser_download_url'],
+                      'content_type': asset['content_type'],
+                      'size_bytes': asset['size'],
+                      'label': asset['name']
+                  }))
+                  break
+          "
+          }
+
+          python3 -c "
+          import subprocess, json
+
+          def get_asset(release, keyword):
+              for asset in release.get('assets', []):
+                  if keyword.lower() in asset['name'].lower():
+                      return {
+                          'name': asset['name'],
+                          'download_url': asset['browser_download_url'],
+                          'content_type': asset['content_type'],
+                          'size_bytes': asset['size'],
+                          'label': asset['name']
+                      }
+              return None
+
+          import sys
+          release = json.loads(open('/dev/stdin').read())
+
+          data = {
+              'version': release['tag_name'],
+              'release_date': release['published_at'][:10],
+              'release_notes_url': release['html_url'],
+              'platforms': {
+                  'windows': {
+                      'standard': get_asset(release, 'standard') and next(
+                          {'name': a['name'], 'download_url': a['browser_download_url'], 'content_type': a['content_type'], 'size_bytes': a['size'], 'label': a['name']}
+                          for a in release['assets'] if 'standard' in a['name'].lower() and a['name'].endswith('.exe')
+                      ),
+                      'pro': next(
+                          {'name': a['name'], 'download_url': a['browser_download_url'], 'content_type': a['content_type'], 'size_bytes': a['size'], 'label': a['name']}
+                          for a in release['assets'] if 'pro' in a['name'].lower() and a['name'].endswith('.exe')
+                      )
+                  },
+                  'macos': {
+                      'standard': next(
+                          {'name': a['name'], 'download_url': a['browser_download_url'], 'content_type': a['content_type'], 'size_bytes': a['size'], 'label': a['name']}
+                          for a in release['assets'] if 'standard' in a['name'].lower() and a['name'].endswith('.pkg')
+                      ),
+                      'pro': next(
+                          {'name': a['name'], 'download_url': a['browser_download_url'], 'content_type': a['content_type'], 'size_bytes': a['size'], 'label': a['name']}
+                          for a in release['assets'] if 'pro' in a['name'].lower() and a['name'].endswith('.pkg')
+                      )
+                  },
+                  'linux': {
+                      'standard': {
+                          'appimage': next(
+                              {'name': a['name'], 'download_url': a['browser_download_url'], 'content_type': a['content_type'], 'size_bytes': a['size'], 'label': a['name']}
+                              for a in release['assets'] if 'standard' in a['name'].lower() and a['name'].endswith('.AppImage')
+                          ),
+                          'deb': next(
+                              {'name': a['name'], 'download_url': a['browser_download_url'], 'content_type': a['content_type'], 'size_bytes': a['size'], 'label': a['name']}
+                              for a in release['assets'] if 'standard' in a['name'].lower() and a['name'].endswith('.deb')
+                          ),
+                          'rpm': next(
+                              {'name': a['name'], 'download_url': a['browser_download_url'], 'content_type': a['content_type'], 'size_bytes': a['size'], 'label': a['name']}
+                              for a in release['assets'] if 'standard' in a['name'].lower() and a['name'].endswith('.rpm')
+                          )
+                      },
+                      'pro': {
+                          'appimage': next(
+                              {'name': a['name'], 'download_url': a['browser_download_url'], 'content_type': a['content_type'], 'size_bytes': a['size'], 'label': a['name']}
+                              for a in release['assets'] if 'pro' in a['name'].lower() and a['name'].endswith('.AppImage')
+                          ),
+                          'deb': next(
+                              {'name': a['name'], 'download_url': a['browser_download_url'], 'content_type': a['content_type'], 'size_bytes': a['size'], 'label': a['name']}
+                              for a in release['assets'] if 'pro' in a['name'].lower() and a['name'].endswith('.deb')
+                          ),
+                          'rpm': next(
+                              {'name': a['name'], 'download_url': a['browser_download_url'], 'content_type': a['content_type'], 'size_bytes': a['size'], 'label': a['name']}
+                              for a in release['assets'] if 'pro' in a['name'].lower() and a['name'].endswith('.rpm')
+                          )
+                      }
+                  }
+              }
+          }
+
+          with open('interceptsuite.json', 'w') as f:
+              json.dump(data, f, indent=2)
+              f.write('\n')
+
+          print('interceptsuite.json updated successfully')
+          " <<< "$RELEASE"
+
+      - name: Commit and push if changed
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add interceptsuite.json
+          if git diff --cached --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "chore: update interceptsuite.json to latest release"
+            git push
+          fi
