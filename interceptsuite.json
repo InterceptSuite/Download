@@ -9,14 +9,14 @@
         "download_url": "https://github.com/InterceptSuite/InterceptSuite/releases/download/v1.2.0/InterceptSuite-Standard-1.2.0-x64-Setup.exe",
         "content_type": "application/x-msdos-program",
         "size_bytes": 16026104,
-        "label": "Windows Standard Installer (.exe)"
+        "label": "InterceptSuite-Standard-1.2.0-x64-Setup.exe"
       },
       "pro": {
         "name": "InterceptSuite-Pro-1.2.0-x64-Setup.exe",
         "download_url": "https://github.com/InterceptSuite/InterceptSuite/releases/download/v1.2.0/InterceptSuite-Pro-1.2.0-x64-Setup.exe",
         "content_type": "application/x-msdownload",
         "size_bytes": 35223336,
-        "label": "Windows Pro Installer (.exe)"
+        "label": "InterceptSuite-Pro-1.2.0-x64-Setup.exe"
       }
     },
     "macos": {
@@ -25,14 +25,14 @@
         "download_url": "https://github.com/InterceptSuite/InterceptSuite/releases/download/v1.2.0/InterceptSuite.Standard-1.2.0-macOS-ARM64.pkg",
         "content_type": "application/octet-stream",
         "size_bytes": 26941011,
-        "label": "macOS Standard ARM64 (.pkg)"
+        "label": "InterceptSuite.Standard-1.2.0-macOS-ARM64.pkg"
       },
       "pro": {
         "name": "InterceptSuite.Pro-1.2.0-macOS-ARM64-signed.pkg",
         "download_url": "https://github.com/InterceptSuite/InterceptSuite/releases/download/v1.2.0/InterceptSuite.Pro-1.2.0-macOS-ARM64-signed.pkg",
         "content_type": "application/octet-stream",
         "size_bytes": 50466993,
-        "label": "macOS Pro ARM64 Signed (.pkg)"
+        "label": "InterceptSuite.Pro-1.2.0-macOS-ARM64-signed.pkg"
       }
     },
     "linux": {
@@ -42,21 +42,21 @@
           "download_url": "https://github.com/InterceptSuite/InterceptSuite/releases/download/v1.2.0/InterceptSuite-Standard-1.2.0-x86_64.AppImage",
           "content_type": "application/octet-stream",
           "size_bytes": 23259640,
-          "label": "Linux Standard (.AppImage)"
+          "label": "InterceptSuite-Standard-1.2.0-x86_64.AppImage"
         },
         "deb": {
           "name": "interceptsuite-standard_1.2.0_amd64.deb",
           "download_url": "https://github.com/InterceptSuite/InterceptSuite/releases/download/v1.2.0/interceptsuite-standard_1.2.0_amd64.deb",
           "content_type": "application/x-debian-package",
           "size_bytes": 19016030,
-          "label": "Linux Standard Debian/Ubuntu (.deb)"
+          "label": "interceptsuite-standard_1.2.0_amd64.deb"
         },
         "rpm": {
           "name": "interceptsuite-standard-1.2.0.x86_64.rpm",
           "download_url": "https://github.com/InterceptSuite/InterceptSuite/releases/download/v1.2.0/interceptsuite-standard-1.2.0.x86_64.rpm",
           "content_type": "application/x-redhat-package-manager",
           "size_bytes": 9452181,
-          "label": "Linux Standard RHEL/Fedora (.rpm)"
+          "label": "interceptsuite-standard-1.2.0.x86_64.rpm"
         }
       },
       "pro": {
@@ -65,21 +65,21 @@
           "download_url": "https://github.com/InterceptSuite/InterceptSuite/releases/download/v1.2.0/InterceptSuitePro-1.2.0-x86_64.AppImage",
           "content_type": "application/octet-stream",
           "size_bytes": 46111224,
-          "label": "Linux Pro (.AppImage)"
+          "label": "InterceptSuitePro-1.2.0-x86_64.AppImage"
         },
         "deb": {
           "name": "interceptsuite-pro_1.2.0_amd64.deb",
           "download_url": "https://github.com/InterceptSuite/InterceptSuite/releases/download/v1.2.0/interceptsuite-pro_1.2.0_amd64.deb",
           "content_type": "application/octet-stream",
           "size_bytes": 39200084,
-          "label": "Linux Pro Debian/Ubuntu (.deb)"
+          "label": "interceptsuite-pro_1.2.0_amd64.deb"
         },
         "rpm": {
           "name": "interceptsuite-pro-1.2.0.x86_64.rpm",
           "download_url": "https://github.com/InterceptSuite/InterceptSuite/releases/download/v1.2.0/interceptsuite-pro-1.2.0.x86_64.rpm",
           "content_type": "application/octet-stream",
           "size_bytes": 9412765,
-          "label": "Linux Pro RHEL/Fedora (.rpm)"
+          "label": "interceptsuite-pro-1.2.0.x86_64.rpm"
         }
       }
     }
