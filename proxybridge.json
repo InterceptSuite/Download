@@ -8,7 +8,7 @@
       "download_url": "https://github.com/InterceptSuite/ProxyBridge/releases/download/v3.2.0/ProxyBridge-Setup-3.2.0.exe",
       "content_type": "application/x-msdownload",
       "size_bytes": 13032752,
-      "label": "Windows Installer (.exe)"
+      "label": "ProxyBridge-Setup-3.2.0.exe"
     },
     "macos": {
       "version": "v3.2.0",
@@ -18,7 +18,7 @@
       "download_url": "https://github.com/InterceptSuite/ProxyBridge/releases/download/v3.2.0/ProxyBridge-v3.2.0-Universal-Installer.pkg",
       "content_type": "application/octet-stream",
       "size_bytes": 2034017,
-      "label": "macOS Universal Installer (.pkg)"
+      "label": "ProxyBridge-v3.2.0-Universal-Installer.pkg"
     },
     "linux": {
       "version": "v3.2.0",
@@ -28,7 +28,7 @@
       "download_url": "https://github.com/InterceptSuite/ProxyBridge/releases/download/v3.2.0/ProxyBridge-Linux-v3.2.0.tar.gz",
       "content_type": "application/x-gzip",
       "size_bytes": 50997,
-      "label": "Linux (.tar.gz)"
+      "label": "ProxyBridge-Linux-v3.2.0.tar.gz"
     }
   }
 }
