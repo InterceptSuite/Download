@@ -1,0 +1,77 @@
+name: proxybridge
+
+on:
+  schedule:
+    - cron: "0 0 */15 * *"
+  workflow_dispatch:
+
+jobs:
+  update-json:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Fetch latest release and update proxybridge.json
+        run: |
+          RELEASE=$(curl -s https://api.github.com/repos/InterceptSuite/ProxyBridge/releases/latest)
+
+          get_asset() {
+            echo "$RELEASE" | python3 -c "
+          import sys, json
+          release = json.load(sys.stdin)
+          keyword = '$1'
+          for asset in release.get('assets', []):
+              if keyword.lower() in asset['name'].lower():
+                  print(json.dumps({
+                      'version': release['tag_name'],
+                      'release_date': release['published_at'][:10],
+                      'release_notes_url': release['html_url'],
+                      'name': asset['name'],
+                      'download_url': asset['browser_download_url'],
+                      'content_type': asset['content_type'],
+                      'size_bytes': asset['size'],
+                      'label': asset['name']
+                  }))
+                  break
+          "
+          }
+
+          WINDOWS=$(get_asset ".exe")
+          MACOS=$(get_asset ".pkg")
+          LINUX=$(get_asset ".tar.gz")
+
+          python3 -c "
+          import json
+
+          windows = $WINDOWS
+          macos   = $MACOS
+          linux   = $LINUX
+
+          data = {
+              'platforms': {
+                  'windows': windows,
+                  'macos':   macos,
+                  'linux':   linux
+              }
+          }
+
+          with open('proxybridge.json', 'w') as f:
+              json.dump(data, f, indent=2)
+              f.write('\n')
+
+          print('proxybridge.json updated successfully')
+          "
+
+      - name: Commit and push if changed
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add proxybridge.json
+          if git diff --cached --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "chore: update proxybridge.json to latest release"
+            git push
+          fi
