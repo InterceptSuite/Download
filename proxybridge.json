@@ -1,34 +1,17 @@
 {
-  "platforms": {
-    "windows": {
-      "version": "v3.2.0",
-      "release_date": "2026-02-18",
-      "release_notes_url": "https://github.com/InterceptSuite/ProxyBridge/releases/tag/v3.2.0",
-      "name": "ProxyBridge-Setup-3.2.0.exe",
-      "download_url": "https://github.com/InterceptSuite/ProxyBridge/releases/download/v3.2.0/ProxyBridge-Setup-3.2.0.exe",
-      "content_type": "application/x-msdownload",
-      "size_bytes": 13032752,
-      "label": "ProxyBridge-Setup-3.2.0.exe"
-    },
-    "macos": {
-      "version": "v3.2.0",
-      "release_date": "2026-02-18",
-      "release_notes_url": "https://github.com/InterceptSuite/ProxyBridge/releases/tag/v3.2.0",
-      "name": "ProxyBridge-v3.2.0-Universal-Installer.pkg",
-      "download_url": "https://github.com/InterceptSuite/ProxyBridge/releases/download/v3.2.0/ProxyBridge-v3.2.0-Universal-Installer.pkg",
-      "content_type": "application/octet-stream",
-      "size_bytes": 2034017,
-      "label": "ProxyBridge-v3.2.0-Universal-Installer.pkg"
-    },
-    "linux": {
-      "version": "v3.2.0",
-      "release_date": "2026-02-18",
-      "release_notes_url": "https://github.com/InterceptSuite/ProxyBridge/releases/tag/v3.2.0",
-      "name": "ProxyBridge-Linux-v3.2.0.tar.gz",
-      "download_url": "https://github.com/InterceptSuite/ProxyBridge/releases/download/v3.2.0/ProxyBridge-Linux-v3.2.0.tar.gz",
-      "content_type": "application/x-gzip",
-      "size_bytes": 50997,
-      "label": "ProxyBridge-Linux-v3.2.0.tar.gz"
-    }
+  "windows": {
+    "version": "4.0.0",
+    "release_date": "2026-06-26",
+    "url": "https://github.com/InterceptSuite/ProxyBridge/releases/download/v4.0.0/ProxyBridge-Setup-4.0.0.exe"
+  },
+  "linux": {
+    "version": "3.2.0",
+    "release_date": "2026-02-19",
+    "url": "https://github.com/InterceptSuite/ProxyBridge/releases/download/v3.2.0/ProxyBridge-Linux-v3.2.0.tar.gz"
+  },
+  "macos": {
+    "version": "3.2.0",
+    "release_date": "2026-02-19",
+    "url": "https://github.com/InterceptSuite/ProxyBridge/releases/download/v3.2.0/ProxyBridge-v3.2.0-Universal-Installer.pkg"
   }
 }
