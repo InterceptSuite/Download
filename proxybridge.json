@@ -2,16 +2,19 @@
   "windows": {
     "version": "4.0.0",
     "release_date": "2026-06-26",
-    "url": "https://github.com/InterceptSuite/ProxyBridge/releases/download/v4.0.0/ProxyBridge-Setup-4.0.0.exe"
+    "download": "https://github.com/InterceptSuite/ProxyBridge/releases/download/v4.0.0/ProxyBridge-Setup-4.0.0.exe",
+    "release_notes": "https://github.com/InterceptSuite/ProxyBridge/releases/tag/v4.0.0"
   },
   "linux": {
     "version": "3.2.0",
     "release_date": "2026-02-19",
-    "url": "https://github.com/InterceptSuite/ProxyBridge/releases/download/v3.2.0/ProxyBridge-Linux-v3.2.0.tar.gz"
+    "download": "https://github.com/InterceptSuite/ProxyBridge/releases/download/v3.2.0/ProxyBridge-Linux-v3.2.0.tar.gz",
+    "release_notes": "https://github.com/InterceptSuite/ProxyBridge/releases/tag/v3.2.0"
   },
   "macos": {
     "version": "3.2.0",
     "release_date": "2026-02-19",
-    "url": "https://github.com/InterceptSuite/ProxyBridge/releases/download/v3.2.0/ProxyBridge-v3.2.0-Universal-Installer.pkg"
+    "download": "https://github.com/InterceptSuite/ProxyBridge/releases/download/v3.2.0/ProxyBridge-v3.2.0-Universal-Installer.pkg",
+    "release_notes": "https://github.com/InterceptSuite/ProxyBridge/releases/tag/v3.2.0"
   }
 }
