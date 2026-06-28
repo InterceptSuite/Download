@@ -1,87 +1,14 @@
 {
-  "version": "v1.2.0",
-  "release_date": "2025-11-09",
-  "release_notes_url": "https://github.com/InterceptSuite/InterceptSuite/releases/tag/v1.2.0",
-  "platforms": {
-    "windows": {
-      "standard": {
-        "name": "InterceptSuite-Standard-1.2.0-x64-Setup.exe",
-        "download_url": "https://github.com/InterceptSuite/InterceptSuite/releases/download/v1.2.0/InterceptSuite-Standard-1.2.0-x64-Setup.exe",
-        "content_type": "application/x-msdos-program",
-        "size_bytes": 16026104,
-        "label": "InterceptSuite-Standard-1.2.0-x64-Setup.exe"
-      },
-      "pro": {
-        "name": "InterceptSuite-Pro-1.2.0-x64-Setup.exe",
-        "download_url": "https://github.com/InterceptSuite/InterceptSuite/releases/download/v1.2.0/InterceptSuite-Pro-1.2.0-x64-Setup.exe",
-        "content_type": "application/x-msdownload",
-        "size_bytes": 35223336,
-        "label": "InterceptSuite-Pro-1.2.0-x64-Setup.exe"
-      }
-    },
-    "macos": {
-      "standard": {
-        "name": "InterceptSuite.Standard-1.2.0-macOS-ARM64.pkg",
-        "download_url": "https://github.com/InterceptSuite/InterceptSuite/releases/download/v1.2.0/InterceptSuite.Standard-1.2.0-macOS-ARM64.pkg",
-        "content_type": "application/octet-stream",
-        "size_bytes": 26941011,
-        "label": "InterceptSuite.Standard-1.2.0-macOS-ARM64.pkg"
-      },
-      "pro": {
-        "name": "InterceptSuite.Pro-1.2.0-macOS-ARM64-signed.pkg",
-        "download_url": "https://github.com/InterceptSuite/InterceptSuite/releases/download/v1.2.0/InterceptSuite.Pro-1.2.0-macOS-ARM64-signed.pkg",
-        "content_type": "application/octet-stream",
-        "size_bytes": 50466993,
-        "label": "InterceptSuite.Pro-1.2.0-macOS-ARM64-signed.pkg"
-      }
-    },
+  "version": "1.2.1",
+  "release_date": "2026-06-15",
+  "release_notes": "https://github.com/InterceptSuite/InterceptSuite/releases/tag/v1.2.1",
+  "downloads": {
+    "windows": "https://github.com/InterceptSuite/InterceptSuite/releases/download/v1.2.1/InterceptSuite-Pro-1.2.1-x64-Setup.exe",
+    "macos": "https://github.com/InterceptSuite/InterceptSuite/releases/download/v1.2.1/InterceptSuite.Pro-1.2.1-macOS-ARM64-signed.pkg",
     "linux": {
-      "standard": {
-        "appimage": {
-          "name": "InterceptSuite-Standard-1.2.0-x86_64.AppImage",
-          "download_url": "https://github.com/InterceptSuite/InterceptSuite/releases/download/v1.2.0/InterceptSuite-Standard-1.2.0-x86_64.AppImage",
-          "content_type": "application/octet-stream",
-          "size_bytes": 23259640,
-          "label": "InterceptSuite-Standard-1.2.0-x86_64.AppImage"
-        },
-        "deb": {
-          "name": "interceptsuite-standard_1.2.0_amd64.deb",
-          "download_url": "https://github.com/InterceptSuite/InterceptSuite/releases/download/v1.2.0/interceptsuite-standard_1.2.0_amd64.deb",
-          "content_type": "application/x-debian-package",
-          "size_bytes": 19016030,
-          "label": "interceptsuite-standard_1.2.0_amd64.deb"
-        },
-        "rpm": {
-          "name": "interceptsuite-standard-1.2.0.x86_64.rpm",
-          "download_url": "https://github.com/InterceptSuite/InterceptSuite/releases/download/v1.2.0/interceptsuite-standard-1.2.0.x86_64.rpm",
-          "content_type": "application/x-redhat-package-manager",
-          "size_bytes": 9452181,
-          "label": "interceptsuite-standard-1.2.0.x86_64.rpm"
-        }
-      },
-      "pro": {
-        "appimage": {
-          "name": "InterceptSuitePro-1.2.0-x86_64.AppImage",
-          "download_url": "https://github.com/InterceptSuite/InterceptSuite/releases/download/v1.2.0/InterceptSuitePro-1.2.0-x86_64.AppImage",
-          "content_type": "application/octet-stream",
-          "size_bytes": 46111224,
-          "label": "InterceptSuitePro-1.2.0-x86_64.AppImage"
-        },
-        "deb": {
-          "name": "interceptsuite-pro_1.2.0_amd64.deb",
-          "download_url": "https://github.com/InterceptSuite/InterceptSuite/releases/download/v1.2.0/interceptsuite-pro_1.2.0_amd64.deb",
-          "content_type": "application/octet-stream",
-          "size_bytes": 39200084,
-          "label": "interceptsuite-pro_1.2.0_amd64.deb"
-        },
-        "rpm": {
-          "name": "interceptsuite-pro-1.2.0.x86_64.rpm",
-          "download_url": "https://github.com/InterceptSuite/InterceptSuite/releases/download/v1.2.0/interceptsuite-pro-1.2.0.x86_64.rpm",
-          "content_type": "application/octet-stream",
-          "size_bytes": 9412765,
-          "label": "interceptsuite-pro-1.2.0.x86_64.rpm"
-        }
-      }
+      "appimage": "https://github.com/InterceptSuite/InterceptSuite/releases/download/v1.2.1/InterceptSuitePro-1.2.1-x86_64.AppImage",
+      "deb": "https://github.com/InterceptSuite/InterceptSuite/releases/download/v1.2.1/interceptsuite-pro_1.2.1_amd64.deb",
+      "rpm": "https://github.com/InterceptSuite/InterceptSuite/releases/download/v1.2.1/interceptsuite-pro-1.2.1.x86_64.rpm"
     }
   }
 }
