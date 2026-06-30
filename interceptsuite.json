@@ -1,14 +1,14 @@
 {
-  "version": "1.2.1",
-  "release_date": "2026-06-15",
-  "release_notes": "https://github.com/InterceptSuite/InterceptSuite/releases/tag/v1.2.1",
+  "version": "1.3.0",
+  "release_date": "2026-06-30",
+  "release_notes": "https://github.com/InterceptSuite/InterceptSuite/releases/tag/v1.3.0",
   "downloads": {
-    "windows": "https://github.com/InterceptSuite/InterceptSuite/releases/download/v1.2.1/InterceptSuite-Pro-1.2.1-x64-Setup.exe",
-    "macos": "https://github.com/InterceptSuite/InterceptSuite/releases/download/v1.2.1/InterceptSuite.Pro-1.2.1-macOS-ARM64-signed.pkg",
+    "windows": "https://github.com/InterceptSuite/InterceptSuite/releases/download/v1.3.0/InterceptSuite-Pro-1.3.0-x64-Setup.exe",
+    "macos": "https://github.com/InterceptSuite/InterceptSuite/releases/download/v1.3.0/InterceptSuite.Pro-1.3.0-macOS-ARM64-signed.pkg",
     "linux": {
-      "appimage": "https://github.com/InterceptSuite/InterceptSuite/releases/download/v1.2.1/InterceptSuitePro-1.2.1-x86_64.AppImage",
-      "deb": "https://github.com/InterceptSuite/InterceptSuite/releases/download/v1.2.1/interceptsuite-pro_1.2.1_amd64.deb",
-      "rpm": "https://github.com/InterceptSuite/InterceptSuite/releases/download/v1.2.1/interceptsuite-pro-1.2.1.x86_64.rpm"
+      "appimage": "https://github.com/InterceptSuite/InterceptSuite/releases/download/v1.3.0/InterceptSuitePro-1.3.0-x86_64.AppImage",
+      "deb": "https://github.com/InterceptSuite/InterceptSuite/releases/download/v1.3.0/interceptsuite-pro_1.3.0_amd64.deb",
+      "rpm": "https://github.com/InterceptSuite/InterceptSuite/releases/download/v1.3.0/interceptsuite-pro-1.3.0.x86_64.rpm"
     }
   }
 }
