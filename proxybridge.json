@@ -1,9 +1,9 @@
 {
   "windows": {
-    "version": "4.2.0",
-    "release_date": "2026-10-17",
-    "download": "https://github.com/InterceptSuite/ProxyBridge/releases/download/v4.2.0_Windows/ProxyBridge-Setup-4.2.0.exe",
-    "release_notes": "https://github.com/InterceptSuite/ProxyBridge/releases/tag/v4.2.0_Windows"
+    "version": "4.3.0",
+    "release_date": "2026-10-22",
+    "download": "https://github.com/InterceptSuite/ProxyBridge/releases/download/v4.3.0_Windows/ProxyBridge-Setup-4.3.0.exe",
+    "release_notes": "https://github.com/InterceptSuite/ProxyBridge/releases/tag/v4.3.0_Windows"
   },
   "linux": {
     "version": "4.0.0",
