@@ -12,9 +12,9 @@
     "release_notes": "https://github.com/InterceptSuite/ProxyBridge/releases/tag/v4.0.0_Linux"
   },
   "macos": {
-    "version": "4.1.1",
-    "release_date": "2026-11-01",
-    "download": "https://github.com/InterceptSuite/ProxyBridge/releases/download/v4.1.1_MacOS/ProxyBridge-v4.1.1-Universal-Installer.pkg",
-    "release_notes": "https://github.com/InterceptSuite/ProxyBridge/releases/tag/v4.1.1_MacOS"
+    "version": "4.1.2",
+    "release_date": "2026-11-05",
+    "download": "https://github.com/InterceptSuite/ProxyBridge/releases/download/v4.1.2_MacOS/ProxyBridge-v4.1.2-Universal-Installer.pkg",
+    "release_notes": "https://github.com/InterceptSuite/ProxyBridge/releases/tag/v4.1.2_MacOS"
   }
 }
