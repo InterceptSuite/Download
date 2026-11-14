@@ -6,10 +6,11 @@
     "release_notes": "https://github.com/InterceptSuite/ProxyBridge/releases/tag/v4.3.0_Windows"
   },
   "linux": {
-    "version": "4.0.1",
-    "release_date": "2026-11-13",
-    "download": "https://github.com/InterceptSuite/ProxyBridge/releases/download/v4.0.1_Linux/ProxyBridge-Linux-v4.0.1_Linux.tar.gz",
-    "release_notes": "https://github.com/InterceptSuite/ProxyBridge/releases/tag/v4.0.1_Linux"
+    "version": "4.1.0",
+    "release_date": "2026-11-14",
+    "download": "https://github.com/InterceptSuite/ProxyBridge/releases/download/v4.1.0_Linux/ProxyBridge-Linux-x64-v4.1.0_Linux.tar.gz",
+    "download_arm64": "https://github.com/InterceptSuite/ProxyBridge/releases/download/v4.1.0_Linux/ProxyBridge-Linux-arm64-v4.1.0_Linux.tar.gz",
+    "release_notes": "https://github.com/InterceptSuite/ProxyBridge/releases/tag/v4.1.0_Linux"
   },
   "macos": {
     "version": "4.1.3",
